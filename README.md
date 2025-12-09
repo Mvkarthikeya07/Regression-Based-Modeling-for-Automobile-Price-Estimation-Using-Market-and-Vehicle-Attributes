@@ -1,86 +1,89 @@
 🚗 AI-Powered Car Price Prediction Web App
-Real-Time Machine Learning Based Used Car Valuation (Flask + ML)
+Real-Time Machine Learning-Based Used Car Valuation (Flask + ML)
+<p align="center"> <img src="https://img.shields.io/badge/Python-3.10+-blue?style=for-the-badge&logo=python"> <img src="https://img.shields.io/badge/Flask-Web%20Framework-black?style=for-the-badge&logo=flask"> <img src="https://img.shields.io/badge/ML-Scikit--Learn-orange?style=for-the-badge&logo=scikitlearn"> <img src="https://img.shields.io/badge/Status-Active-success?style=for-the-badge"> </p>
 📌 Overview
 
-This is a complete end-to-end Machine Learning + Web Application project, developed during my InternPe Internship.
+This project is a complete end-to-end Machine Learning + Web Application, developed during my InternPe Internship.
 
-The app predicts the price of a used car based on:
+The system predicts the price of a used car based on:
 
 Manufacturer
 
-KMS Driven
+Kilometers Driven
 
 Fuel Type
 
-Car Age
+Age of the Car
 
 It includes:
 
-✔ A fully cleaned dataset
+✔ Cleaned real-world dataset
 ✔ ML training pipeline (train.py)
 ✔ Saved ML model (model/model.pkl)
 ✔ Flask backend (app.py)
-✔ Responsive UI (HTML + Bootstrap)
-✔ AJAX-based instant predictions
+✔ Responsive UI with Bootstrap
+✔ AJAX-based instant predictions (no page reload)
 
-This project demonstrates real-world ML deployment skills with clean structure and maintainable code.
+A production-ready deployment structure ensures modularity, clarity, and scalability.
 
 🚀 Key Features
 🔍 Machine Learning
 
-Processes and cleans noisy car dataset
+Cleans and preprocesses noisy car dataset
 
-Numerical & categorical feature engineering
+Handles numerical + categorical features
 
-Regression-based price prediction
+Regression-based prediction
 
-Fallback median-based estimation (never breaks)
+Median fallback for stable results
 
-Extendable to RandomForest, XGBoost, etc.
+Fully extendable (RandomForest, XGBoost, etc.)
 
 🌐 Web Application
 
-Flask backend with clear routing
+Flask backend with organized routing
 
-Clean, responsive UI using HTML, CSS, Bootstrap
+Modern UI (HTML + CSS + Bootstrap)
 
-Supports both Form POST and AJAX JSON prediction
+Supports:
 
-Results shown instantly without page reload
+Form POST prediction
 
-Stable and error-safe production-style design
+AJAX JSON prediction
+
+Page does not reload in AJAX mode
+
+Error-safe design for stable user experience
 
 🛠 Tech Stack
-Layer	Technologies
+Layer	Technology
 Language	Python
 Backend	Flask
 Frontend	HTML, CSS, Bootstrap, JavaScript
-Machine Learning	NumPy, Pandas, Scikit-Learn
-Built Under	InternPe Internship
-
+ML Libraries	NumPy, Pandas, Scikit-Learn
+Environment	Virtualenv
+Developed During	InternPe Internship
 📂 Project Structure
-
 CAR-PRICE-PREDICTION/
-│
-├── app.py                     # Flask backend
-├── train.py                   # ML training script
-├── requirements.txt           # Dependencies
+│── app.py                   # Flask backend
+│── train.py                 # ML model training script
+│── requirements.txt         # Dependencies
 │
 ├── data/
-│   └── cars.csv               # Dataset
+│   └── cars.csv             # Dataset
 │
 ├── model/
-│   └── model.pkl              # Saved ML model
+│   └── model.pkl            # Trained ML model
 │
 ├── static/
 │   ├── css/
-│   │   └── styles.css         # Custom styles
+│   │   └── styles.css       # Styling
 │   └── js/
-│       └── app.js             # AJAX prediction script
+│       └── app.js           # AJAX logic
 │
 └── templates/
-    ├── index.html             # Main user interface
-    └── result.html            # Prediction results page
+    ├── index.html           # Main UI
+    └── result.html          # Result page
 
 ⚙️ Installation & Setup
 1️⃣ Clone the Repository
@@ -96,19 +99,18 @@ python -m venv venv
 4️⃣ Install Dependencies
 pip install -r requirements.txt
 
-5️⃣ Train Model (Optional, if model.pkl not present)
+5️⃣ Train the Model (Optional)
 python train.py
 
 6️⃣ Run the Flask App
 python app.py
 
-🔗 Open in Browser
+7️⃣ Open in Browser
 
 👉 http://127.0.0.1:5000/
 
 🎮 How the App Works
-
-User enters:
+🖊 User Inputs:
 
 Manufacturer
 
@@ -118,70 +120,76 @@ Fuel Type
 
 Car Age
 
-Data is sent to Flask via:
+📡 Data Sent To Server Via:
 
-Normal POST form submission, or
+Form POST
 
-AJAX JSON request (no page reload)
+AJAX JSON (instant)
 
-Flask processes input → applies ML model
+⚙ ML Logic Executes:
 
-Prediction appears:
+Cleans input
 
-Instantly (AJAX), or
+Applies regression model
 
-On a new page (Form)
+Calculates final predicted price
+
+📤 Output is Displayed:
+
+Instantly with AJAX
+
+On result page with form submission
 
 🧠 Machine Learning Logic
 🔧 Data Cleaning
 
-Converts kilometer strings → numeric
+Converts kilometer strings → clean numeric
 
 Normalizes manufacturer names
 
-Fixes inconsistent fuel labels
+Standardizes fuel labels
 
-🔮 Prediction Workflow
+Removes outliers for stability
+
+🔮 Prediction Formula (Fallback Mode)
 predicted_price = median_price * age_factor * kms_factor
 
 
-Fallback ensures the app never crashes, even with unseen data.
+Ensures 100% uptime even with unseen inputs.
 
 📸 Screenshots
 
-Add your images under /screenshots or attach them in README:
+<img width="1366" height="768" alt="Screenshot (16)" src="https://github.com/user-attachments/assets/fbfc4a87-7713-4caa-a8da-9cd54c172603" />
 
-<img width="1366" height="768" alt="Screenshot (16)" src="https://github.com/user-attachments/assets/4aa95bb4-80f0-49a5-bdf3-41ec4d5c62a9" />
+<img width="1366" height="768" alt="Screenshot (18)" src="https://github.com/user-attachments/assets/f9344be3-b20a-43fb-b661-52ed2a425799" />
 
-<img width="1366" height="768" alt="Screenshot (18)" src="https://github.com/user-attachments/assets/fbbb1d7c-5620-4db6-a8ca-2670f50f2e4a" />
-
-<img width="1366" height="768" alt="Screenshot (19)" src="https://github.com/user-attachments/assets/c49cc610-9e4e-4462-af64-5d657e69c51c" />
+<img width="1366" height="768" alt="Screenshot (19)" src="https://github.com/user-attachments/assets/4ee16a5f-b7c0-4776-b8cc-4fb4749f072e" />
 
 📚 What I Learned
 
 Building ML pipelines
 
-Cleaning real-world datasets
+Handling & cleaning real-world datasets
 
-Flask backend development
+Building Flask backends
 
-AJAX for real-time interaction
+AJAX for real-time UX
 
-Full-stack ML deployment workflow
+Deploying ML models in web apps
 
-Production-like project structuring
+Writing production-quality project structure
 
 🏅 Internship
 
-This project was created as part of my InternPe Internship, focusing on:
+This project was created during my InternPe Internship, where I focused on:
 
-Applied Machine Learning
-
-ML integration with web applications
+Practical machine learning
 
 Real-time prediction systems
 
-Flask-based deployment
+End-to-end ML deployment
+
+Flask development
 
 📬 Contact
 
@@ -192,4 +200,4 @@ Flask-based deployment
 
 ⭐ Support
 
-If you found this project helpful, consider giving it a ⭐ on GitHub!
+If you like this project, please give it a ⭐ on GitHub!
