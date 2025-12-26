@@ -5,28 +5,28 @@ Real-Time Machine Learning–Based Used Car Valuation (Flask + ML)
 
 This project is a complete end-to-end Machine Learning + Web Application, developed during my InternPe Internship.
 
-The application predicts the market price of a used car based on key vehicle attributes using a regression-based ML model and provides real-time predictions through a responsive Flask web interface.
+The application predicts the market value of a used car based on key vehicle attributes using a regression-based Machine Learning model, and delivers real-time predictions through a clean, responsive Flask web interface.
 
-The project demonstrates real-world ML deployment, clean backend architecture, and production-style design principles.
+The project demonstrates real-world ML deployment, clean backend architecture, and production-style design principles, making it suitable for academic evaluation, internships, and professional portfolios.
 
 🚀 Key Features
 🔍 Machine Learning
 
 Cleans and preprocesses real-world used-car data
 
-Handles numerical and categorical features
+Handles both numerical and categorical features
 
-Regression-based price prediction
+Regression-based car price prediction
 
-Fallback median-based estimation to ensure stability
+Fallback median-based estimation to ensure system stability
 
-Easily extendable to Random Forest, XGBoost, etc.
+Easily extendable to Random Forest, XGBoost, and other advanced models
 
 🌐 Web Application
 
 Flask backend with organized routing
 
-Clean, responsive UI using HTML, CSS, Bootstrap
+Clean, responsive UI using HTML, CSS, and Bootstrap
 
 Supports:
 
@@ -34,29 +34,29 @@ Traditional Form POST predictions
 
 AJAX-based real-time predictions (no page reload)
 
-Error-safe design for a smooth user experience
+Error-safe design for a smooth and reliable user experience
 
 🧠 Machine Learning Workflow
 🧹 Data Preprocessing
 
-Converts kilometer strings → numeric values
+Converts kilometer strings → numerical values
 
 Standardizes manufacturer names
 
-Normalizes fuel type labels
+Normalizes fuel-type labels
 
 Removes outliers for improved prediction stability
 
 🔮 Prediction Logic
 
-ML regression model predicts car price
+Primary ML regression model predicts the car price
 
-If unseen or unstable inputs occur, a fallback formula ensures reliability:
+If unseen or unstable inputs are encountered, a fallback formula ensures reliability:
 
 predicted_price = median_price × age_factor × kms_factor
 
 
-This guarantees robust predictions without system failure.
+This design guarantees robust predictions without system failure, even for edge cases.
 
 🛠 Tech Stack
 Layer	Technology
@@ -96,7 +96,7 @@ cd AI-Car-Price-Prediction
 
 2️⃣ Create Virtual Environment (Recommended)
 python -m venv venv
-source venv/bin/activate   # Windows: venv\Scripts\activate
+source venv/bin/activate        # Windows: venv\Scripts\activate
 
 3️⃣ Install Dependencies
 pip install -r requirements.txt
@@ -108,11 +108,11 @@ python train.py
 python app.py
 
 
-Open your browser:
+Open your browser and navigate to:
 
 http://127.0.0.1:5000/
 
-🎮 How the App Works
+🎮 How the Application Works
 
 User enters car details:
 
@@ -130,24 +130,26 @@ Form POST, or
 
 AJAX JSON request
 
-ML model processes the inputs and predicts the price
+The ML model processes the inputs and predicts the car price
 
-Result is displayed:
+The result is displayed:
 
 Instantly (AJAX), or
 
 On a results page (Form submission)
 
 📸 Application Screenshots
-<img width="1366" height="768" src="https://github.com/user-attachments/assets/fbfc4a87-7713-4caa-a8da-9cd54c172603" />
-<img width="1366" height="768" src="https://github.com/user-attachments/assets/f9344be3-b20a-43fb-b661-52ed2a425799" />
-<img width="1366" height="768" src="https://github.com/user-attachments/assets/c49cc610-9e4e-4462-af64-5d657e69c51c" />
+
+Add screenshots inside a /screenshots folder and reference them here.
+
+<img src="screenshots/home.png" width="800">
+<img src="screenshots/result.png" width="800">
 
 📚 What I Learned
 
 Cleaning and preprocessing real-world datasets
 
-Building end-to-end ML pipelines
+Building end-to-end Machine Learning pipelines
 
 Flask backend development
 
@@ -155,7 +157,7 @@ AJAX-based real-time user interaction
 
 Deploying ML models in web applications
 
-Writing production-style project structure
+Writing production-style project structures
 
 🏅 Internship Acknowledgment
 
@@ -173,9 +175,9 @@ Full-stack ML application development
 
 M V Karthikeya
 Aspiring Machine Learning Engineer
-Python | Machine Learning | Flask
+Skills: Python • Machine Learning • Flask
 
- 📜 License
+📜 License
 
 This project is licensed under the MIT License.
 
