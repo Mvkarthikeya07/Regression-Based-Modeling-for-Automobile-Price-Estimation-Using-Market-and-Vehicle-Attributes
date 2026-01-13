@@ -1,5 +1,5 @@
-🚗 Machine Learning–Based Automobile Price Prediction System
-Real-Time Machine Learning–Based Used Car Valuation (Flask + ML)
+🚗 Regression-Based Modeling for Automobile Price Estimation Using Market and Vehicle Attributes
+
 <p align="center"> <img src="https://img.shields.io/badge/Python-3.10+-blue?style=for-the-badge&logo=python"> <img src="https://img.shields.io/badge/Flask-Web%20Framework-black?style=for-the-badge&logo=flask"> <img src="https://img.shields.io/badge/Machine%20Learning-Scikit--Learn-orange?style=for-the-badge&logo=scikitlearn"> <img src="https://img.shields.io/badge/Status-Active-success?style=for-the-badge"> </p>
 📌 Overview
 
