@@ -66,7 +66,9 @@ Frontend	HTML, CSS, Bootstrap, JavaScript
 Machine Learning	NumPy, Pandas, Scikit-learn
 Environment	Virtualenv
 Internship	InternPe
+
 📂 Project Structure
+'''''
 CAR-PRICE-PREDICTION/
 │
 ├── app.py                     # Flask backend
@@ -88,8 +90,10 @@ CAR-PRICE-PREDICTION/
 └── templates/
     ├── index.html             # Main user interface
     └── result.html            # Prediction results page
+''''''
 
 ⚙️ Installation & Setup
+
 1️⃣ Clone the Repository
 git clone https://github.com/your-username/AI-Car-Price-Prediction.git
 cd AI-Car-Price-Prediction
