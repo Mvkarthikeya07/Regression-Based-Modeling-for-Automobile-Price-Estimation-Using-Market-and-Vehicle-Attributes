@@ -1,124 +1,212 @@
-🚗 Regression-Based Modeling for Automobile Price Estimation Using Market and Vehicle Attributes
+🚗 Regression-Based Automobile Price Estimation Using Market and Vehicle Attributes
 
-<p align="center"> <img src="https://img.shields.io/badge/Python-3.10+-blue?style=for-the-badge&logo=python"> <img src="https://img.shields.io/badge/Flask-Web%20Framework-black?style=for-the-badge&logo=flask"> <img src="https://img.shields.io/badge/Machine%20Learning-Scikit--Learn-orange?style=for-the-badge&logo=scikitlearn"> <img src="https://img.shields.io/badge/Status-Active-success?style=for-the-badge"> </p>
-📌 Overview
+An end-to-end Machine Learning + Web Application that predicts the market value of used cars using regression-based modeling and delivers real-time predictions through a responsive Flask web interface.
 
-This project is a complete end-to-end Machine Learning + Web Application, developed during my InternPe Internship.
+Developed during my InternPe AI/ML Internship, this project demonstrates practical skills in data preprocessing, machine learning model development, and real-time ML deployment in a web application environment.
 
-The application predicts the market value of a used car based on key vehicle attributes using a regression-based Machine Learning model, and delivers real-time predictions through a clean, responsive Flask web interface.
+The system combines machine learning prediction logic with a robust fallback estimation mechanism, ensuring stable and reliable results even when encountering unseen inputs.
 
-The project demonstrates real-world ML deployment, clean backend architecture, and production-style design principles, making it suitable for academic evaluation, internships, and professional portfolios.
+📌 Project Overview
+
+The automobile resale market is influenced by multiple vehicle attributes such as manufacturer, mileage, fuel type, and vehicle age. Estimating a fair resale price requires analyzing these variables collectively.
+
+This project implements a regression-based machine learning system capable of predicting the price of a used car based on its characteristics. The trained model is integrated into a Flask-based web application, allowing users to obtain price predictions instantly through a browser interface.
+
+The project emphasizes:
+
+Practical machine learning system design
+
+Clean backend architecture
+
+Real-world data preprocessing
+
+Production-style web deployment
+
+🏆 Hackathon Recognition
+
+This project was also submitted to the global hackathon:
+
+🚀 Codegeist 2025: Atlassian Williams Racing Edition
+
+Organized by **Atlassian, Codegeist is one of the world's largest developer hackathons focused on building innovative applications on the Atlassian ecosystem.
+
+🎉 The project submission was among the first 300 entries worldwide, earning official Codegeist participant recognition and swag.
+
+This participation highlights the project's:
+
+Innovation and practical implementation
+
+Early participation in a global developer competition
+
+Real-world application development during a hackathon environment
+
+📂 Hackathon Submission Proof
+
+To maintain transparency and documentation, the official confirmation email received from Atlassian has been uploaded as a PDF.
+
+📄 Confirmation Email (PDF):
+
+https://drive.google.com/file/d/1bRdTqv6edJupHsh3e62eGCW5duk2dTNd/view?usp=drivesdk
+
+This document contains:
+
+Official confirmation from Atlassian
+
+Proof of participation in Codegeist 2025: Atlassian Williams Racing Edition
+
+Verification that the submission was among the first 300 entries
+
 
 🚀 Key Features
+
 🔍 Machine Learning
 
-Cleans and preprocesses real-world used-car data
+Cleans and preprocesses real-world used-car datasets
 
-Handles both numerical and categorical features
+Handles both categorical and numerical features
 
-Regression-based car price prediction
+Implements regression-based price prediction
 
-Fallback median-based estimation to ensure system stability
+Includes fallback estimation logic for unseen inputs
 
-Easily extendable to Random Forest, XGBoost, and other advanced models
+Easily extendable to advanced models such as:
+
+Random Forest
+
+Gradient Boosting
+
+XGBoost
+
+Neural Networks
 
 🌐 Web Application
 
-Flask backend with organized routing
+Flask backend with modular routing
 
-Clean, responsive UI using HTML, CSS, and Bootstrap
+Clean and responsive UI built with:
 
-Supports:
+HTML
 
-Traditional Form POST predictions
+CSS
 
-AJAX-based real-time predictions (no page reload)
+Bootstrap
 
-Error-safe design for a smooth and reliable user experience
+JavaScript
+
+Supports two prediction modes:
+
+Form-Based Prediction
+
+Traditional POST request submission
+
+Displays results on a results page
+
+AJAX Real-Time Prediction
+
+Instant predictions
+
+No page reload required
+
+Smooth user experience
+
+The application is designed with error-safe mechanisms, ensuring reliable functionality even with unexpected inputs.
 
 🧠 Machine Learning Workflow
+
 🧹 Data Preprocessing
 
-Converts kilometer strings → numerical values
+The dataset undergoes multiple preprocessing steps to improve model performance and stability.
 
-Standardizes manufacturer names
+Key transformations include:
 
-Normalizes fuel-type labels
+Converting kilometer strings into numerical values
 
-Removes outliers for improved prediction stability
+Standardizing manufacturer names
+
+Normalizing fuel-type labels
+
+Removing extreme outliers
+
+Handling missing values
+
+These steps help improve model accuracy and robustness.
 
 🔮 Prediction Logic
 
-Primary ML regression model predicts the car price
+The system primarily relies on a trained regression machine learning model.
 
-If unseen or unstable inputs are encountered, a fallback formula ensures reliability:
+However, to ensure system stability under unexpected inputs, a fallback estimation formula is implemented.
 
 predicted_price = median_price × age_factor × kms_factor
 
+This fallback ensures that the application never fails to produce a reasonable estimate, even when the model encounters unseen combinations of attributes.
 
-This design guarantees robust predictions without system failure, even for edge cases.
+🛠 Technology Stack
 
-🛠 Tech Stack
 Layer	Technology
-Language	Python
-Backend	Flask
+Programming Language	Python
+Backend Framework	Flask
 Frontend	HTML, CSS, Bootstrap, JavaScript
 Machine Learning	NumPy, Pandas, Scikit-learn
+Data Processing	Pandas
 Environment	Virtualenv
 Internship	InternPe
 
 📂 Project Structure
-'''''
 CAR-PRICE-PREDICTION/
 │
-├── app.py                     # Flask backend
-├── train.py                   # ML training script
-├── requirements.txt           # Dependencies
+├── app.py                # Flask backend
+├── train.py              # ML training script
+├── requirements.txt      # Python dependencies
 │
 ├── data/
-│   └── cars.csv               # Dataset
+│   └── cars.csv          # Dataset
 │
 ├── model/
-│   └── model.pkl              # Trained ML model
+│   └── model.pkl         # Trained ML model
 │
 ├── static/
 │   ├── css/
-│   │   └── styles.css         # Custom styling
+│   │   └── styles.css
+│   │
 │   └── js/
-│       └── app.js             # AJAX prediction logic
+│       └── app.js
 │
 └── templates/
-    ├── index.html             # Main user interface
-    └── result.html            # Prediction results page
-''''''
-
+    ├── index.html
+    └── result.html
+    
 ⚙️ Installation & Setup
 
 1️⃣ Clone the Repository
 git clone https://github.com/your-username/AI-Car-Price-Prediction.git
 cd AI-Car-Price-Prediction
-
-2️⃣ Create Virtual Environment (Recommended)
+2️⃣ Create Virtual Environment
 python -m venv venv
-source venv/bin/activate        # Windows: venv\Scripts\activate
 
+Activate the environment:
+
+Windows
+
+venv\Scripts\activate
+
+Linux / Mac
+
+source venv/bin/activate
 3️⃣ Install Dependencies
 pip install -r requirements.txt
-
 4️⃣ Train the Model (Optional)
 python train.py
-
 5️⃣ Run the Application
 python app.py
 
-
-Open your browser and navigate to:
+Open your browser:
 
 http://127.0.0.1:5000/
 
 🎮 How the Application Works
 
-User enters car details:
+User enters vehicle details:
 
 Manufacturer
 
@@ -128,92 +216,100 @@ Fuel Type
 
 Car Age
 
-Data is sent to the Flask backend via:
+Data is sent to the backend through:
 
-Form POST, or
+Form POST request
 
 AJAX JSON request
 
-The ML model processes the inputs and predicts the car price
+The machine learning model predicts the car price.
 
-The result is displayed:
+The result is displayed either:
 
-Instantly (AJAX), or
+Instantly via AJAX
 
-On a results page (Form submission)
+On a results page
 
 📸 Application Screenshots
 
-Add screenshots inside a /screenshots folder and reference them here.
+<img width="1366" height="768" alt="Screenshot (233)" src="https://github.com/user-attachments/assets/52b0948f-e2e4-4f34-8d78-c7d9d3a63a3d" />
 
-<img src="screenshots/home.png" width="800">
-<img src="screenshots/result.png" width="800">
+<img width="1366" height="768" alt="Screenshot (234)" src="https://github.com/user-attachments/assets/244ab290-5361-48e3-ad6b-b05147c2cb31" />
 
 📄 Research Publication
 
 The research work associated with this project has been published in a peer-reviewed journal.
 
-Title:
+Title
+
 Machine Learning–Based Automobile Price Prediction System
 
-Journal:
+Journal
+
 International Journal of Research and Analytical Reviews (IJRAR)
 
-Publication Link:
+Publication Link
+
 https://www.ijrar.org/viewfull.php?p_id=IJRAR25D2970
 
-This publication presents the theoretical background, dataset analysis, and model evaluation, while the current project emphasizes real-time deployment and system implementation.
+The research paper discusses:
+
+Dataset analysis
+
+Feature engineering
+
+Model evaluation
+
+The current repository focuses on practical system implementation and deployment.
 
 🏢 Internship Context
 
-This project was developed during my AI/ML Internship at InternPe
-(Nov 24, 2025 – Dec 21, 2025).
+This project was developed during my AI/ML Internship at InternPe (Nov 24, 2025 – Dec 21, 2025).
 
-The work focused on applying practical machine learning concepts learned during the internship, including:
+The internship emphasized practical machine learning skills such as:
 
-Real-world data preprocessing and feature engineering
+Real-world dataset preprocessing
 
 Supervised regression modeling
-
-Backend development using Flask
-
-Real-time ML model deployment
-
-Robust system design with fallback mechanisms
-
-This project represents academic and practical work completed during the internship period, emphasizing industry-relevant ML deployment practices.
-
-📚 What I Learned
-
-Cleaning and preprocessing real-world datasets
-
-Building end-to-end Machine Learning pipelines
-
-Flask backend development
-
-AJAX-based real-time user interaction
-
-Deploying ML models in web applications
-
-Writing production-style project structures
-
-🏅 Internship Acknowledgment
-
-This project was developed as part of my InternPe Internship, focusing on:
-
-Applied Machine Learning
-
-Real-time prediction systems
 
 Flask-based ML deployment
 
 Full-stack ML application development
 
+Production-style system design
+
+📚 Key Learnings
+
+Through this project I gained practical experience in:
+
+Cleaning and preprocessing real-world datasets
+
+Designing machine learning pipelines
+
+Building Flask-based backend systems
+
+Implementing AJAX real-time predictions
+
+Deploying ML models in web applications
+
+Structuring production-ready ML projects
+
 👤 Author
 
 M V Karthikeya
 Aspiring Machine Learning Engineer
-Skills: Python • Machine Learning • Flask
+
+Skills:
+
+Python
+
+Machine Learning
+
+Flask
+
+Data Processing
+
+Web-based ML Deployment
 
 📜 License
 
