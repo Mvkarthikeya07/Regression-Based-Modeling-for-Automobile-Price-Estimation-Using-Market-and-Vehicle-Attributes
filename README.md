@@ -151,7 +151,7 @@ Machine Learning	NumPy, Pandas, Scikit-learn
 Data Processing	Pandas
 Environment	Virtualenv
 Internship	InternPe
-```bash
+```
 📂 Project Structure
 CAR-PRICE-PREDICTION/
 │
