@@ -9,7 +9,7 @@
 
 <br/><br/>
 
-# Regression-Based Automobile Price Estimatio
+# Regression-Based Automobile Price Estimation
 ### End-to-End ML System for Used Car Valuation · Flask Web App · AJAX Real-Time Predictions
 
 *A production-style machine learning pipeline that predicts used car market value from vehicle attributes — trained, evaluated, and deployed as a responsive web application.*
