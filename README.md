@@ -322,9 +322,26 @@ The submission was among the **first 300 entries worldwide**, earning official C
 
 ---
 
-## Internship Context
+## ## 🏢 Internship Context
 
-Developed during an AI/ML Internship at **InternPe** (Nov 24 – Dec 21, 2025), with a focus on practical machine learning system design, real-world data preprocessing, and Flask-based ML deployment.
+| Field | Detail |
+|---|---|
+| Organization | InternPe |
+| Role | AI/ML Intern |
+| Focus | Real-world ML deployment & automobile price estimation |
+| Status | ✅ Completed |
+
+**Skills applied during this internship project:**
+- Feature engineering from real-world used-car listings (price, mileage, age, fuel type)
+- Regression modeling with log-transformed targets for skewed price distributions
+- Leakage-safe preprocessing using sklearn Pipeline + ColumnTransformer
+- Backend ML integration using Flask (dual-mode: form POST & AJAX JSON)
+- Fallback estimator design for zero-downtime, production-style inference
+- Clean, responsive UI for real-time prediction and interpretability
+
+🔗 **Certificate:** [View on LinkedIn](https://www.linkedin.com/posts/m-v-karthikeya-b26a2131b_internshipcompletion-aiml-machinelearning-activity-7408819858177724416-m1Rt?utm_source=share&utm_medium=member_desktop&rcm=ACoAAFEhlw4BT-6V0rnLIZSzBIoK7YvV2QlbHLc)
+
+🔗 **Watch the Demo:** [LinkedIn Video](https://www.linkedin.com/posts/m-v-karthikeya-b26a2131b_internpe-internpeinternship-machinelearning-activity-7401244012453617664-IG08?utm_source=share&utm_medium=member_desktop&rcm=ACoAAFEhlw4BT-6V0rnLIZSzBIoK7YvV2QlbHLc)
 
 ---
 
